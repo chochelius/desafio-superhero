@@ -9,6 +9,8 @@ $(document).ready(function() {
 
     $("button").click(() => {
     let valor1 = document.getElementById("inputSuperHero").value;
+
+    if (valor1 <= 731) {
     console.log(valor1);
     $.ajax({
         url: `https://superheroapi.com/api.php/953666262240615/${valor1}`,
@@ -23,7 +25,10 @@ $(document).ready(function() {
             console.log('Ocurrió un error.')
             console.log(e)
         }
-    })
+    })}
+    else {
+        alert("Valor inválido")
+    }
     });
    });
 
